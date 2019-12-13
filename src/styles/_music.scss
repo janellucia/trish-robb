@@ -2,19 +2,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 70px 0;
-  img {
-    width: 30%;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+  .first-image {
+    width: 15%;
+    align-self: flex-start;
+
+    @media (max-width: 1025px) {
+      display: none;
+    }
+  }
+  .second-image {
+    width: 26%;
+    align-self: flex-end;
+    margin-left: -40px;
+
+    @media (max-width: 1025px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
   }
 }
 
 .playlist {
-  background: $green;
+  background: $blush;
   margin-left: -60px;
   padding: 70px;
+  z-index: 99;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-top: -80px;
+    margin-left: initial;
+    padding: 50px;
+  }
 
   .player {
     min-width: 300px;
+
     .buttons {
       display: flex;
       justify-content: center;
@@ -32,7 +64,7 @@
             transition: all .05s;
 
             &:hover {
-              fill: $powderPurple;
+              fill: $red;
             }
           }
         }
@@ -40,8 +72,10 @@
     }
     .timebar {
       height: 30px;
-      .bar {
-
+      bar {
+        margin: 0 auto;
+        display: block;
+        width: 100% !important;
       }
     }
   }
@@ -55,10 +89,24 @@
     li {
       cursor: pointer;
       padding: 2px;
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid rgba($black, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       &:hover, &:focus, &:active {
-        color: $powderPurple;
+        color: $red;
+      }
+    }
+  }
+  .social-follow {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    a {
+      font-size: 2rem;
+      &:hover, &:focus, &:active {
+        color: $red;
       }
     }
   }

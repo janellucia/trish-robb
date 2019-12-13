@@ -7,7 +7,7 @@ import { faSpotify, faFacebookF, faInstagram, faYoutube, faItunesNote } from '@f
 export default props => {
   return (
     // Pass on our props
-    <Menu>
+    <Menu right>
       <a className="menu-item" href="/#music">
         Music
       </a>

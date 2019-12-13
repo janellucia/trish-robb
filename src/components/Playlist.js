@@ -6,6 +6,7 @@ import trackThree from '../audio/window-pane.mp3'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackward, faForward, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
+import { faSpotify, faFacebookF, faInstagram, faYoutube, faItunesNote } from '@fortawesome/free-brands-svg-icons'
 
 
 
@@ -18,17 +19,17 @@ function getTime(time) {
 }
 
 const TRACKS = [
-  { id: 1, title: "If Only the Rain" },
-  { id: 2, title: "Everybody Needs a Name" },
-  { id: 3, title: "Window Pane" }
+  { id: 1, title: "If Only the Rain", duration: '3:20' },
+  { id: 2, title: "Everybody Needs a Name", duration: '4:19' },
+  { id: 3, title: "Window Pane", duration: '3:16' }
 ];
 
 class Playlist extends React.Component {
   state = {
     selectedTrack: "If Only the Rain",
     player: "paused",
-    currentTime: null,
-    duration: null
+    currentTime: '0',
+    duration: '200.66'
   };
 
   componentDidMount() {
@@ -124,6 +125,8 @@ class Playlist extends React.Component {
     this.player.currentTime = time;
   };
 
+
+
   render() {
     const list = TRACKS.map(item => {
       return (
@@ -131,12 +134,12 @@ class Playlist extends React.Component {
           key={item.id}
           onClick={() => this.setState({ selectedTrack: item.title })}
           style={{
-            fontWeight: item.title === this.state.selectedTrack && "bold"
+            color: item.title === this.state.selectedTrack && "red"
           }}
           tabIndex='0'
-
         >
-          {item.title}
+          <span>{item.title}</span>
+          <span>{item.duration}</span>
         </li>
       );
     });
@@ -180,14 +183,19 @@ class Playlist extends React.Component {
           <ul className="tracklist" aria-label="Trish Robb Music trak list                                    ">{list}</ul>
         </div>
         <audio ref={ref => (this.player = ref)} />
+        <ul className="social-follow">
+          <li><a href="https://www.instagram.com/trishrobbmusic/?hl=en" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>
+          <li><a href="https://www.youtube.com/watch?v=jytfVOUUxnw&feature=youtu.be" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a></li>
+          <li><a href="https://open.spotify.com/artist/7tC9Blhmr3PSmrWwwNG9sl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faSpotify} /></a></li>
+          <li><a href="https://ca.tunecore.com/sell-your-music-online?ref=c_9061009&cmp=b_1t1&utm_content=192369383501_&utm_term=%2Bget%20music%20on%20%2Bapple%20%2Bmusic&utm_source=google&utm_medium=cpc&utm_campaign=ca_md_am&gclid=CjwKCAiAis3vBRBdEiwAHXB29OJhc__q_OcPEkxKihKCLEnb3nOqyeVmGeUBNr-upYKtcenY8-IUkBoCFr0QAvD_BwE" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faItunesNote} /></a></li>
+          <li><a href="https://www.facebook.com/Trish-Robb-65027745673/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+        </ul>
       </div>
     );
   }
 }
 
 function TimeBar({ currentTime, duration, setTime }) {
-  const formattedCurrentTime = getTime(currentTime);
-  const formattedDuration = getTime(duration);
   const sBits = [];
   let count = 0;
   while (count < duration) {
@@ -216,13 +224,6 @@ function TimeBar({ currentTime, duration, setTime }) {
   return (
     <div className="timebar">
       <div className="bar">{seconds}</div>
-      {currentTime ? (
-        <div className="time">
-          {formattedCurrentTime} / {formattedDuration}
-        </div>
-      ) : (
-          ""
-        )}
     </div>
   );
 }

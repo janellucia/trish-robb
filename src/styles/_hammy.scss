@@ -15,8 +15,13 @@
   position: absolute;
   width: 31px;
   height: 25px;
-  left: 2.5%;
+  right: 2.5%;
   top: 30px;
+  display: none;
+
+  @media (max-width: 768px) {
+      display: inline;
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -39,7 +44,7 @@
 
   &:hover, &:focus, &:active {
     background: transparent;
-    color: $green;
+    color: $blue;
   }
 }
 

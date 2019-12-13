@@ -15,7 +15,7 @@
 
 
 body {
-  background: $grey;
+  background: $almond;
   font-family: $mainFont;
   font-size: 1rem;
 }
@@ -28,6 +28,9 @@ main {
 .wrapper {
   width: 95%;
   margin: 0 auto;
+    @media (max-width: 768px) {
+    width: 99%;
+  }
 }
 
   h2 {
@@ -43,9 +46,10 @@ a {
   text-transform: uppercase;
   transition: all .5s;
   outline: none;
+  cursor: url('../images/favicon.png');
 
   &:hover, &:focus, &:active {
-    color: $green;
+    color: $burgundy;
   }
 }
 

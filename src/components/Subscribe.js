@@ -44,7 +44,7 @@ function Subscribe() {
   return (
     <section id="subscribe">
       <h2>Mailing List</h2>
-      <p>Join Trish Robb's mailing list to stay up-to-date on upcoming music and shows!</p>
+      <p>Sign up to stay up-to-date on upcoming shows, new music, and special announcements!</p>
       <MailchimpSubscribe
         url={url}
         render={({ subscribe, status, message }) => (
