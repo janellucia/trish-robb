@@ -1,0 +1,37 @@
+[
+  {
+    "date": "Jan 15, 2020",
+    "venue": "Dakota Tavern",
+    "city": "Toronto, ON",
+    "tickets": "#",
+    "rsvp": "#"
+  },
+  {
+    "date": "Jan 20, 2020",
+    "venue": "Cameron House",
+    "city": "Toronto, ON",
+    "tickets": "#",
+    "rsvp": "#"
+  },
+  {
+    "date": "Feb 2, 2020",
+    "venue": "Lula Lounge",
+    "city": "Toronto, ON",
+    "tickets": "#",
+    "rsvp": "#"
+  },
+  {
+    "date": "Feb 11, 2020",
+    "venue": "Drake Undergraound",
+    "city": "Toronto, ON",
+    "tickets": "#",
+    "rsvp": "#"
+  },
+  {
+    "date": "Feb 18, 2020",
+    "venue": "The Pheonix",
+    "city": "Toronto, ON",
+    "tickets": "#",
+    "rsvp": "#"
+  }
+]

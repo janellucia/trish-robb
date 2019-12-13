@@ -5,6 +5,7 @@ header {
   left: 0;
   border-bottom: 1px solid $black;
   background: $grey;
+  z-index: 9999;
 
   .wrapper {
     display: flex;

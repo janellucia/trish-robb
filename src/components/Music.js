@@ -5,7 +5,7 @@ import Playlist from './Playlist.js'
 
 function Music() {
   return (
-    <section className="music">
+    <section id="music">
 
       <img src={image} className="App-logo" alt="album cover" />
       <Playlist />

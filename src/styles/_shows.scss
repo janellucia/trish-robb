@@ -1,0 +1,28 @@
+#shows {
+  padding: 50px 0;
+
+  table {
+    min-width: 800px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    tr {
+      margin: 50px 0 !important;
+    }
+    th, td {
+      padding: 10px 0;
+    }
+    th {
+      display: none;
+    }
+    td {
+      text-align: center;
+    }
+
+    .show-date {
+      text-align: left;
+    }
+    .tickets, .rsvp {
+      font-weight: 700;
+    }
+  }
+}

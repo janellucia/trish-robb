@@ -4,7 +4,9 @@ import Footer from './components/Footer.js';
 import './styles/main.scss';
 import Music from './components/Music.js'
 import About from './components/About.js'
-// import Hammy from './components/Hammy.js'
+import Shows from './components/Shows.js'
+import Video from './components/Video.js'
+import Subscribe from './components/Subscribe.js'
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
         <div className="wrapper">
           <Music />
           <About />
+          <Shows />
+          <Video />
+          <Subscribe />
         </div>
       </main>
       <Footer />
-      {/* </div> */}
     </div>
   );
 }
