@@ -3,28 +3,31 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
   border-bottom: 1px solid $black;
   background: $grey;
 
-  img {
-    width: 33%;
-    max-width: 220px;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+
+    div {
+      width: 130px;
+    }
+
+    img {
+      width: 22%;
+      max-width: 180px;
+    }
+
+
+    .contact-button {
+      padding: 7px 25px;
+      border: 1px solid $black;
+    }
   }
-
-
-  .contact-button {
-    padding: 7px 25px;
-    border: 1px solid $black;
-    text-decoration: none;
-    color: $black;
-    text-transform: uppercase;
-    margin-right: 20px;
-  }
-
 }
 
 

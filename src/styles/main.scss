@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'header';
 @import 'hammy';
+@import 'footer';
 
 
 @import 'music';
@@ -12,8 +13,50 @@
 
 body {
   background: $grey;
+  font-family: $mainFont;
+  font-size: 1rem;
 }
 
 main {
   margin-top: 83px;
+}
+
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+a {
+  color: $black;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .5s;
+  outline: none;
+
+  &:hover, &:focus, &:active {
+    color: $green;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  outline: none;
+}
+
+
+.hidden {
+  position: absolute;
+  left: -24000px;
+
+  &:focus {
+    left: 0;
+  }
 }

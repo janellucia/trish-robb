@@ -13,8 +13,10 @@ function App() {
       <a href="#footer" className="hidden">skip to footer</a>
       <Header />
       <main id="main">
-        <Music />
-        <About />
+        <div className="wrapper">
+          <Music />
+          <About />
+        </div>
       </main>
       <Footer />
       {/* </div> */}

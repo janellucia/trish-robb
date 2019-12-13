@@ -12,3 +12,52 @@ $burntMustard: #d99326;
 
 $black: #222;
 $grey: #f9f9f9;
+
+@font-face {
+  font-family: 'Standard-Book';
+  src: url('../fonts/standard-book-webfont.eot') format('embedded-opentype'),
+  url('../fonts/standard-book-webfont.svg') format('svg'),
+  url('../fonts/standard-book-webfont.ttf') format('truetype'),
+  url('../fonts/standard-book-webfont.woff') format('woff'),
+  url('../fonts/standard-book-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Standard-Book-Italic';
+  src: url('../fonts/standard-book-italic-webfont.eot') format('embedded-opentype'),
+  url('../fonts/standard-book-italic-webfont.svg') format('svg'),
+  url('../fonts/standard-book-italic-webfont.ttf') format('truetype'),
+  url('../fonts/standard-book-italic-webfont.woff') format('woff'),
+  url('../fonts/standard-book-italic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Standard-Bold';
+  src: url('../fonts/standard-bold-webfont.eot') format('embedded-opentype'),
+  url('../fonts/standard-bold-webfont.svg') format('svg'),
+  url('../fonts/standard-bold-webfont.ttf') format('truetype'),
+  url('../fonts/standard-bold-webfont.woff') format('woff'),
+  url('../fonts/standard-bold-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Standard-Bold-Italic';
+  src: url('../fonts/standard-bold-italic-webfont.eot') format('embedded-opentype'),
+  url('../fonts/standard-bold-italic-webfont.svg') format('svg'),
+  url('../fonts/standard-bold-italic-webfont.ttf') format('truetype'),
+  url('../fonts/standard-bold-italic-webfont.woff') format('woff'),
+  url('../fonts/standard-bold-italic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+$mainFont: 'Standard-Book', sans-serif;
+$mainFontItalic: 'Standard-Book-Italic', sans-serif;
+$mainFontBold: 'Standard-Bold', sans-serif;
+$mainFontBoldItalic: 'Standard-Bold-Italic', sans-serif;

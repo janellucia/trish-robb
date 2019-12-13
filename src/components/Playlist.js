@@ -177,7 +177,7 @@ class Playlist extends React.Component {
             duration={this.state.duration}
           />
           <h2>Trish Robb Music</h2>
-          <ul className="tracklist" aria-label="Trish Robb Music trak list">{list}</ul>
+          <ul className="tracklist" aria-label="Trish Robb Music trak list                                    ">{list}</ul>
         </div>
         <audio ref={ref => (this.player = ref)} />
       </div>
