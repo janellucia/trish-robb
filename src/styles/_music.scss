@@ -1,0 +1,65 @@
+.music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+  img {
+    width: 30%;
+  }
+}
+
+.playlist {
+  background: $green;
+  margin-left: -60px;
+  padding: 70px;
+
+  .player {
+    min-width: 300px;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+          height: 2em;
+          width: 2em;
+          path {
+            fill: $black;
+            transition: all .05s;
+
+            &:hover {
+              fill: $powderPurple;
+            }
+          }
+        }
+      }
+    }
+    .timebar {
+      height: 30px;
+      .bar {
+
+      }
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+  .tracklist {
+    list-style: none;
+    padding: 0;
+    li {
+      cursor: pointer;
+      padding: 2px;
+      border-bottom: 1px solid $black;
+
+      &:hover, &:focus, &:active {
+        color: $powderPurple;
+      }
+    }
+  }
+}

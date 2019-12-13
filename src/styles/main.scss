@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'header';
+@import 'hammy';
+
+
+@import 'music';
+@import 'about';
+
+
+
+
+
+body {
+  background: $grey;
+}
+
+main {
+  margin-top: 83px;
+}
