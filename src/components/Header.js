@@ -25,7 +25,8 @@ function Header() {
         <ul className="desktop-nav">
           <li><Link activeClass="active" className="menu-item" to="video" spy={true} smooth={true} duration={500} offset={-80}>Video</Link></li>
           <li><a className="menu-item" href="mailto:trishrobb@gmail.com">Contact</a></li>
-          <li><Link activeClass="active" className="menu-item" to="footer" spy={true} smooth={true} duration={500} offset={-80}>Follow</Link></li>
+          {/* <li><Link activeClass="active" className="menu-item" to="footer" spy={true} smooth={true} duration={500} offset={-80}>Follow</Link></li> */}
+          <li><a href="/concepts">Concepts</a></li>
         </ul>
       </div>
     </header>

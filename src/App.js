@@ -2,11 +2,13 @@ import React from 'react';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import './styles/main.scss';
-import Music from './components/Music.js'
-import About from './components/About.js'
-import Shows from './components/Shows.js'
-import Video from './components/Video.js'
-import Subscribe from './components/Subscribe.js'
+import Main from './pages/Main.js'
+import Concepts from './pages/Concepts.js'
+
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom'
 
 function App() {
   return (
@@ -14,15 +16,12 @@ function App() {
       <a href="#main" className="hidden">skip to main</a>
       <a href="#footer" className="hidden">skip to footer</a>
       <Header />
-      <main id="main" name="main">
-        <div className="wrapper">
-          <Music name="music" />
-          <About name="about" />
-          <Shows name="shows" />
-          <Video name="video" />
-          <Subscribe name="subscribe" />
+      <Router>
+        <div>
+          <Route exact path="/" component={Main} />
+          <Route path="/concepts" component={Concepts} />
         </div>
-      </main>
+      </Router>
       <Footer name="footer" />
     </div>
   );

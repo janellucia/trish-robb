@@ -1,0 +1,23 @@
+.concepts-page {
+  margin-top: 150px;
+
+  h2 {
+    font-family: $mainFontBold;
+    text-align: left;
+  }
+  img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin: 20px 0;
+  }
+
+  .two-images {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    img {
+      width: 49%;
+    }
+  }
+}
