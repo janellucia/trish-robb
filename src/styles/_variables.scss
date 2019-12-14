@@ -22,6 +22,8 @@ $blush: #F6D7DA;
 $red: #C80816;
 $forestGreen: #28503F;
 $burgundy: #751B30;
+$brightBlue: #3983B3;
+$mustard: #DCB034;
 
 $black: #222;
 $white: #fff;
@@ -31,50 +33,65 @@ $error: #d63c35;
 $success: #498865;
 
 @font-face {
-  font-family: 'Standard-Book';
-  src: url('../fonts/standard-book-webfont.eot') format('embedded-opentype'),
-  url('../fonts/standard-book-webfont.svg') format('svg'),
-  url('../fonts/standard-book-webfont.ttf') format('truetype'),
-  url('../fonts/standard-book-webfont.woff') format('woff'),
-  url('../fonts/standard-book-webfont.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
+  font-family: 'Favorit-Light';
+  src: url('../fonts/FavoritTrialStd-Light.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-Light.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Standard-Book-Italic';
-  src: url('../fonts/standard-book-italic-webfont.eot') format('embedded-opentype'),
-  url('../fonts/standard-book-italic-webfont.svg') format('svg'),
-  url('../fonts/standard-book-italic-webfont.ttf') format('truetype'),
-  url('../fonts/standard-book-italic-webfont.woff') format('woff'),
-  url('../fonts/standard-book-italic-webfont.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
+  font-family: 'Favorit-Light-Italic';
+  src: url('../fonts/FavoritTrialStd-LightItalic.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-LightItalic.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Standard-Bold';
-  src: url('../fonts/standard-bold-webfont.eot') format('embedded-opentype'),
-  url('../fonts/standard-bold-webfont.svg') format('svg'),
-  url('../fonts/standard-bold-webfont.ttf') format('truetype'),
-  url('../fonts/standard-bold-webfont.woff') format('woff'),
-  url('../fonts/standard-bold-webfont.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
+  font-family: 'Favorit-Book';
+  src: url('../fonts/FavoritTrialStd-Book.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-Book.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Standard-Bold-Italic';
-  src: url('../fonts/standard-bold-italic-webfont.eot') format('embedded-opentype'),
-  url('../fonts/standard-bold-italic-webfont.svg') format('svg'),
-  url('../fonts/standard-bold-italic-webfont.ttf') format('truetype'),
-  url('../fonts/standard-bold-italic-webfont.woff') format('woff'),
-  url('../fonts/standard-bold-italic-webfont.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
+  font-family: 'Favorit-Book-Italic';
+  src: url('../fonts/FavoritTrialStd-BookItalic.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-BookItalic.woff2') format('woff2');
 }
 
-$mainFont: 'Standard-Book', sans-serif;
-$mainFontItalic: 'Standard-Book-Italic', sans-serif;
-$mainFontBold: 'Standard-Bold', sans-serif;
-$mainFontBoldItalic: 'Standard-Bold-Italic', sans-serif;
+@font-face {
+  font-family: 'Favorit-Medium';
+  src: url('../fonts/FavoritTrialStd-Medium.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Favorit-Medium-Italic';
+  src: url('../fonts/FavoritTrialStd-MediumItalic.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Favorit-Bold';
+  src: url('../fonts/FavoritTrialStd-Bold.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Favorit-Bold-Italic';
+  src: url('../fonts/FavoritTrialStd-BoldItalic.woff') format('woff'),
+  url('../fonts/FavoritTrialStd-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Glyphworld-Glacier';
+  src: url('../fonts/GlyphWorld-Glacier.otf') format('OpenType')
+}
+
+$mainFontLight: 'Favorit-Light', sans-serif;
+$mainFontLightItalic: 'Favorit-Light-Italic', sans-serif;
+$mainFont: 'Favorit-Book', sans-serif;
+$mainFontItalic: 'Favorit-Book-Italic', sans-serif;
+$mainFontMedium: 'Favorit-Book', sans-serif;
+$mainFontMediumItalic: 'Favorit-Book-Italic', sans-serif;
+$mainFontBold: 'Favorit-Bold', sans-serif;
+$mainFontBoldItalic: 'Favorit-Bold-Italic', sans-serif;
+
+$test: 'Glyphworld-Glacier';

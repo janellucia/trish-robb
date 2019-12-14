@@ -34,9 +34,11 @@ main {
 }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     text-align: center;
+    // font-family: $test;
+    font-family: $mainFontLight;
   }
 
 
@@ -49,7 +51,7 @@ a {
   cursor: url('../images/favicon.png');
 
   &:hover, &:focus, &:active {
-    color: $burgundy;
+    color: $brightBlue;
   }
 }
 

@@ -6,7 +6,7 @@
   padding: 70px 0;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .first-image {
     width: 15%;
@@ -18,15 +18,26 @@
   }
   .second-image {
     width: 26%;
-    align-self: flex-end;
+    align-self: flex-start;
     margin-left: -40px;
+    margin-top: 20px;
 
     @media (max-width: 1025px) {
       width: 40%;
     }
 
     @media (max-width: 768px) {
-      width: 80%;
+      display: none;
+    }
+  }
+  .mobile-image {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      width: 75%;
+      max-width: 300px;
+      height: auto;
+      z-index: 99;
     }
   }
 }
@@ -34,18 +45,22 @@
 .playlist {
   background: $blush;
   margin-left: -60px;
+  margin-top: 60px;
   padding: 70px;
-  z-index: 99;
 
   @media (max-width: 768px) {
     width: 80%;
-    margin-top: -80px;
+    max-width: 380px;
+    margin-top: -60px;
     margin-left: initial;
     padding: 50px;
+    padding-top: 90px;
   }
 
   .player {
     min-width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
 
     .buttons {
       display: flex;
@@ -57,31 +72,43 @@
         border: none;
         cursor: pointer;
         svg {
-          height: 2em;
-          width: 2em;
+          height: 2rem;
+          width: 2rem;
           path {
             fill: $black;
             transition: all .05s;
 
             &:hover {
-              fill: $red;
+              fill: $black;
+              opacity: 0.7;
             }
           }
+        }
+      }
+      .play-pause {
+        margin: 0 10px;
+        svg {
+          height: 3rem;
+          width: 3rem;
         }
       }
     }
     .timebar {
       height: 30px;
-      bar {
-        margin: 0 auto;
+      .bar {
         display: block;
-        width: 100% !important;
+        width: 300px;
+        height: 3px !important;
+        background: black;
+        
       }
     }
   }
 
   h2 {
-    text-transform: uppercase;
+    text-align: left;
+    margin: 0 0 5px;
+    font-size: 1.4rem;
   }
   .tracklist {
     list-style: none;
@@ -94,19 +121,21 @@
       justify-content: space-between;
       align-items: center;
 
-      &:hover, &:focus, &:active {
-        color: $red;
+      &:hover, &:focus {
+        color: $black;
+        opacity: 0.7;
       }
     }
   }
   .social-follow {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
     a {
       font-size: 2rem;
-      &:hover, &:focus, &:active {
-        color: $red;
+      &:hover, &:focus {
+        color: $black;
+        opacity: 0.7;
       }
     }
   }

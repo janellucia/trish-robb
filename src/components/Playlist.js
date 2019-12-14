@@ -9,30 +9,30 @@ import { faBackward, faForward, faPlay, faPause } from '@fortawesome/free-solid-
 import { faSpotify, faFacebookF, faInstagram, faYoutube, faItunesNote } from '@fortawesome/free-brands-svg-icons'
 
 
-
-function getTime(time) {
-  if (!isNaN(time)) {
-    return (
-      Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
-    );
-  }
-}
-
 const TRACKS = [
-  { id: 1, title: "If Only the Rain", duration: '3:20' },
-  { id: 2, title: "Everybody Needs a Name", duration: '4:19' },
-  { id: 3, title: "Window Pane", duration: '3:16' }
+  { id: 1, title: "If Only the Rain" },
+  { id: 2, title: "Everybody Needs a Name" },
+  { id: 3, title: "Window Pane" }
 ];
 
 class Playlist extends React.Component {
   state = {
     selectedTrack: "If Only the Rain",
-    player: "paused",
-    currentTime: '0',
-    duration: '200.66'
+    player: "playing",
+    currentTime: null,
+    duration: null
   };
 
+  setDeafultTrack() {
+  }
+
+
   componentDidMount() {
+
+    this.player.src = trackOne;
+    this.setState({ player: "paused", duration: this.player.duration, currentTime: 0 });
+
+
     this.player.addEventListener("timeupdate", e => {
       this.setState({
         currentTime: e.target.currentTime,
@@ -48,6 +48,7 @@ class Playlist extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.selectedTrack !== prevState.selectedTrack) {
       let track;
+      track = trackOne;
       switch (this.state.selectedTrack) {
         case "If Only the Rain":
           track = trackOne;
@@ -134,7 +135,7 @@ class Playlist extends React.Component {
           key={item.id}
           onClick={() => this.setState({ selectedTrack: item.title })}
           style={{
-            color: item.title === this.state.selectedTrack && "red"
+            fontFamily: item.title === this.state.selectedTrack && 'Favorit-Bold'
           }}
           tabIndex='0'
         >
@@ -144,12 +145,8 @@ class Playlist extends React.Component {
       );
     });
 
-    const currentTime = getTime(this.state.currentTime);
-    const duration = getTime(this.state.duration);
-
     return (
       <div className="playlist">
-        {/* <img src={albumCover} className="App-logo" alt="logo" /> */}
         <div className="player">
           {this.state.player !== "stopped" && (
             <div className="buttons">
@@ -157,12 +154,12 @@ class Playlist extends React.Component {
                 <FontAwesomeIcon icon={faBackward} />
               </button>
               {this.state.player === "paused" && (
-                <button onClick={() => this.setState({ player: "playing" })} aria-label="play">
+                <button onClick={() => this.setState({ player: "playing" })} aria-label="play" className="play-pause">
                   <FontAwesomeIcon icon={faPlay} />
                 </button>
               )}
               {this.state.player === "playing" && (
-                <button onClick={() => this.setState({ player: "paused" })} aria-label="pause">
+                <button onClick={() => this.setState({ player: "paused" })} aria-label="pause" className="play-pause">
                   <FontAwesomeIcon icon={faPause} />
                 </button>
               )}
@@ -182,7 +179,7 @@ class Playlist extends React.Component {
           <h2>Trish Robb Music</h2>
           <ul className="tracklist" aria-label="Trish Robb Music trak list                                    ">{list}</ul>
         </div>
-        <audio ref={ref => (this.player = ref)} />
+        <audio ref={ref => (this.player = ref)} autoPlay />
         <ul className="social-follow">
           <li><a href="https://www.instagram.com/trishrobbmusic/?hl=en" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a></li>
           <li><a href="https://www.youtube.com/watch?v=jytfVOUUxnw&feature=youtu.be" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a></li>
@@ -210,13 +207,23 @@ function TimeBar({ currentTime, duration, setTime }) {
         style={{
           float: "left",
           cursor: "pointer",
-          height: "5px",
-          width: `${300 / Math.round(duration)}px`,
+          height: "3px",
+          width:
+            currentTime && Math.round(currentTime) === second
+              ? "4px"
+              : `${296 / Math.round(duration)}px`,
           background:
             currentTime && Math.round(currentTime) === second
-              ? "white"
-              : "black",
-          transition: "all 0.5s ease-in-out"
+              ? "#C80816"
+              : "#222",
+          transform:
+            currentTime && Math.round(currentTime) === second
+              ? "scale(4)"
+              : "scale(1)",
+          zIndex:
+            currentTime && Math.round(currentTime) === second
+              ? "999"
+              : ""
         }}
       />
     );
