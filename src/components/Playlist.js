@@ -211,7 +211,7 @@ function TimeBar({ currentTime, duration, setTime }) {
           width:
             currentTime && Math.round(currentTime) === second
               ? "4px"
-              : `${296 / Math.round(duration)}px`,
+              : `${246 / Math.round(duration)}px`,
           background:
             currentTime && Math.round(currentTime) === second
               ? "#C80816"

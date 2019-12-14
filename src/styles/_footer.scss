@@ -9,6 +9,10 @@ footer {
     margin: 0 auto;
     a {
       font-size: 2rem;
+
+      &:hover, &:focus, &:active {
+        color: $forestGreen;
+      }
     }
   }
 

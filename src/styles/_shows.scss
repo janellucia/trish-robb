@@ -39,7 +39,7 @@
       }
     }
 
-    tr:first-of-type, tr:last-of-type {
+    tr:last-of-type {
       border-bottom: none;
     }
     th, td {
@@ -55,8 +55,10 @@
       font-size: 0.9rem;
     }
     .venue {
-      font-family: $mainFontBold;
-      color: $brightBlue;
+      a {
+        font-family: $mainFontBold;
+        color: $brightBlue;
+      }
     }
     .city {
       font-size: 0.9rem;
@@ -70,6 +72,7 @@
         background: $forestGreen;
         color: $white;
         text-align: center;
+        float: right;
 
         &:hover, &:active, &:focus {
           background: lighten($forestGreen, 10%);

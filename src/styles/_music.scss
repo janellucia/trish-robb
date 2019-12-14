@@ -35,7 +35,7 @@
     @media (max-width: 768px) {
       display: block;
       width: 75%;
-      max-width: 300px;
+      max-width: 250px;
       height: auto;
       z-index: 99;
     }
@@ -53,13 +53,14 @@
     max-width: 380px;
     margin-top: -60px;
     margin-left: initial;
-    padding: 50px;
+    padding: 20px;
+    // padding: 50px 0;
     padding-top: 90px;
   }
 
   .player {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 250px;
+    max-width: 250px;
     margin: 0 auto;
 
     .buttons {
@@ -97,7 +98,7 @@
       height: 30px;
       .bar {
         display: block;
-        width: 300px;
+        width: 250px;
         height: 3px !important;
         background: black;
         

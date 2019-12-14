@@ -20,7 +20,7 @@ function Shows() {
           {showData.map((showDetail, index) => {
             return <tr key={index}>
               <td className="date">{showDetail.date}</td>
-              <td className="venue">{showDetail.venue}</td>
+              <td className="venue"><a href={showDetail.tickets} aria-label={showDetail.venue + 'tickets'} target="_blank" rel="noopener noreferrer">{showDetail.venue}</a></td>
               <td className="city">{showDetail.city}</td>
               <td className="tickets"><a href={showDetail.tickets} aria-label={showDetail.venue + 'tickets'} target="_blank" rel="noopener noreferrer">Tickets</a></td>
               <td className="rsvp"><a href={showDetail.rsvp} aria-label={showDetail.venue + 'RSVP on Facebook'} target="_blank" rel="noopener noreferrer">RSVP</a></td>
