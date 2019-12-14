@@ -48,7 +48,7 @@ a {
   text-transform: uppercase;
   transition: all .5s;
   outline: none;
-  cursor: url('../images/favicon.png');
+  cursor: pointer;
 
   &:hover, &:focus, &:active {
     color: $brightBlue;

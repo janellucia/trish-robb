@@ -14,16 +14,16 @@ function App() {
       <a href="#main" className="hidden">skip to main</a>
       <a href="#footer" className="hidden">skip to footer</a>
       <Header />
-      <main id="main">
+      <main id="main" name="main">
         <div className="wrapper">
-          <Music />
-          <About />
-          <Shows />
-          <Video />
-          <Subscribe />
+          <Music name="music" />
+          <About name="about" />
+          <Shows name="shows" />
+          <Video name="video" />
+          <Subscribe name="subscribe" />
         </div>
       </main>
-      <Footer />
+      <Footer name="footer" />
     </div>
   );
 }

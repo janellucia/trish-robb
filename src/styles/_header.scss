@@ -17,16 +17,20 @@ header {
         justify-content: flex-start;
       }
 
-    img {
-      width: 33%;
-      max-width: 440px;
-      margin: 0 30px 0 20px;
+      .logo {
+        width: 33%;
+        max-width: 440px;
+        margin: 0 30px 0 20px;
 
         @media (max-width: 768px) {
             width: 60%;
             margin: 0;
         }
-    }
+        img {
+          width: 100%;
+        }
+      }
+
 
     .desktop-nav {
       display: flex;
@@ -36,6 +40,9 @@ header {
       li {
         margin-right: 10px;
         font-size: 0.8rem;
+        a {
+          cursor: pointer;
+        }
       }
       li:last-of-type {
         margin-right: 0;
