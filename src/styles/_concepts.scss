@@ -14,14 +14,29 @@
     text-transform: uppercase;
   }
 
-  .concept-links {
+  .home-link {
     font-family: $mainFontBold;
     text-transform: uppercase;
     margin-right: 15px;
-    background: $mulberry;
+    background: $sapphire;
     color: $white;
     padding: 5px 15px;
   }
+
+  .concept-link-wrap {
+    margin: 40px 0;
+
+    .concept-links {
+      font-family: $mainFontBold;
+      text-transform: uppercase;
+      margin-right: 15px;
+      background: $mulberry;
+      color: $white;
+      padding: 5px 15px;
+    }
+
+  }
+
 
   p {
     max-width: 550px;

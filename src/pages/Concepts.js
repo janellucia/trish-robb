@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
+import Main from './Main.js'
 import Values from './Values.js'
 import ConceptOne from './ConceptOne.js'
 import ConceptTwo from './ConceptTwo.js'
@@ -12,7 +13,8 @@ function Concepts() {
     <Router>
       <main id="main" className="concepts-page">
         <div className="wrapper">
-          <Link to="/">&#8592; Link back to website</Link>
+          <Route path="/" exact component={Main} />
+          <Link to="/" className="home-link">&#8592; Link back to website</Link>
           <div className="intro">
             <h2>Intro</h2>
             <p>Hey Trish, here is some work I've done on your branding/site. I took information from our first two meetings and  put together a few concepts for you to check out. I also put together an example site you can check out as a sample. All the deets below!</p>
@@ -23,15 +25,17 @@ function Concepts() {
             <p>Take a look at the 3 concepts and decide which you like best, feel free to mix and match if you like aspects of multiple concepts, this is customized to what you like. </p>
             <p>From there I will finalize website designs and start building.</p>
           </div>
-          <Link to="values" className="concept-links">Values</Link>
-          <Link to="concept-one" className="concept-links">Concept One</Link>
-          <Link to="concept-two" className="concept-links">Concept Two</Link>
-          <Link to="concept-three" className="concept-links">Concept Three</Link>
+          <div className="concept-link-wrap">
+            <Link to="/concepts/values" className="concept-links">Values</Link>
+            <Link to="/concepts/concept-one" className="concept-links">Concept One</Link>
+            <Link to="/concepts/concept-two" className="concept-links">Concept Two</Link>
+            <Link to="/concepts/concept-three" className="concept-links">Concept Three</Link>
+          </div>
           <Switch>
-            <Route path="/values" exact component={Values} />
-            <Route path="/concept-one" component={ConceptOne} />
-            <Route path="/concept-two" component={ConceptTwo} />
-            <Route path="/concept-three" component={ConceptThree} />
+            <Route path="/concepts/values" exact component={Values} />
+            <Route path="/concepts/concept-one" component={ConceptOne} />
+            <Route path="/concepts/concept-two" component={ConceptTwo} />
+            <Route path="/concepts/concept-three" component={ConceptThree} />
           </Switch>
         </div>
       </main>
