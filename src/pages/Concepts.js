@@ -13,8 +13,9 @@ function Concepts() {
     <Router>
       <main id="main" className="concepts-page">
         <div className="wrapper">
-          <Route path="/" exact component={Main} />
-          <Link to="/" className="home-link">&#8592; Link back to website</Link>
+          {/* <Route path="/" exact component={Main} /> */}
+          {/* <Link to="/" className="home-link">&#8592; Link back to website</Link> */}
+          <a href="/" className="home-link">&#8592; Link back to website</a>
           <div className="intro">
             <h2>Intro</h2>
             <p>Hey Trish, here is some work I've done on your branding/site. I took information from our first two meetings and  put together a few concepts for you to check out. I also put together an example site you can check out as a sample. All the deets below!</p>

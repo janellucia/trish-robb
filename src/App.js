@@ -5,10 +5,7 @@ import './styles/main.scss';
 import Main from './pages/Main.js'
 import Concepts from './pages/Concepts.js'
 
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -17,10 +14,10 @@ function App() {
         <a href="#main" className="hidden">skip to main</a>
         <a href="#footer" className="hidden">skip to footer</a>
         {/* <Header /> */}
-        <div>
+        <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/concepts" component={Concepts} />
-        </div>
+          <Route path="/concepts/" component={Concepts} />
+        </Switch>
         <Footer name="footer" />
       </div>
     </Router>
