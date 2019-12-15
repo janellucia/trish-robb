@@ -39,14 +39,14 @@
       background: none;
       border: none;
       outline: none;
-      border-bottom: 2px solid $burgundy;
+      border-bottom: 2px solid $mulberry;
       padding: 5px;
       font-size: 1.1rem;
 
     }
     button {
       width: initial;
-      background: $burgundy;
+      background: $mulberry;
       color: $white;
       font-family: $mainFontBold;
       text-transform: uppercase;
@@ -61,7 +61,7 @@
         width: 305px;
       }
       &:hover, &:active, &:focus {
-        background: lighten($burgundy, 10%);
+        background: lighten($mulberry, 10%);
       }
     }
   }
