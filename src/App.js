@@ -12,18 +12,18 @@ import {
 
 function App() {
   return (
-    <div className="App" id="App">
-      <a href="#main" className="hidden">skip to main</a>
-      <a href="#footer" className="hidden">skip to footer</a>
-      {/* <Header /> */}
-      <Router>
+    <Router>
+      <div className="App" id="App">
+        <a href="#main" className="hidden">skip to main</a>
+        <a href="#footer" className="hidden">skip to footer</a>
+        {/* <Header /> */}
         <div>
           <Route exact path="/" component={Main} />
           <Route path="/concepts" component={Concepts} />
         </div>
-      </Router>
-      <Footer name="footer" />
-    </div>
+        <Footer name="footer" />
+      </div>
+    </Router>
   );
 }
 
