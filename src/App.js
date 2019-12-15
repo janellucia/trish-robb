@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header.js';
+// import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import './styles/main.scss';
 import Main from './pages/Main.js'
@@ -15,7 +15,7 @@ function App() {
     <div className="App" id="App">
       <a href="#main" className="hidden">skip to main</a>
       <a href="#footer" className="hidden">skip to footer</a>
-      <Header />
+      {/* <Header /> */}
       <Router>
         <div>
           <Route exact path="/" component={Main} />

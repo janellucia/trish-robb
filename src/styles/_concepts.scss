@@ -1,9 +1,26 @@
 .concepts-page {
-  margin-top: 150px;
+  // margin-top: 150px;
+  // z-index: 100;
 
   h2 {
     font-family: $mainFontBold;
     text-align: left;
+    margin-bottom: -10px;
+  }
+
+  h3 {
+    margin-bottom: -10px;
+    font-family: $mainFontBold;
+    text-transform: uppercase;
+  }
+
+  p {
+    max-width: 550px;
+
+    a {
+      font-family: $mainFontBold;
+      display: block;
+    }
   }
   img {
     width: 80%;
@@ -20,4 +37,8 @@
       width: 49%;
     }
   }
+}
+
+.concepts-page {
+
 }
